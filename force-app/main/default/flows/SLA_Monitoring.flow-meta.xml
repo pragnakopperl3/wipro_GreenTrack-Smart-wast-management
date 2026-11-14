@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <description>Monitors complaint response deadlines against SLA thresholds for issue severity.</description>
+    <interviewLabel>SLA Monitoring {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SLA_Monitoring</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Flag_Overdue_Complaints</name>
+        <label>Flag Overdue Complaints</label>
+        <locationX>176</locationX>
+        <locationY>184</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Resolved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Due_Date__c</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Waste_Complaint__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Flag_Overdue_Complaints</targetReference>
+        </connector>
+        <object>Waste_Complaint__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

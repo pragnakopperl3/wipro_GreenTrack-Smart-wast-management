@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Team__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Service team assigned to clean up and resolve this issue.</description>
+    <label>Assigned Team</label>
+    <referenceTo>Service_Team__c</referenceTo>
+    <relationshipLabel>Waste Complaints</relationshipLabel>
+    <relationshipName>Waste_Complaints</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

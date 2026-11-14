@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Illegal_Dumping_Waste_Complaint</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Illegal Dumping</label>
+    <queue>Illegal_Dumping</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

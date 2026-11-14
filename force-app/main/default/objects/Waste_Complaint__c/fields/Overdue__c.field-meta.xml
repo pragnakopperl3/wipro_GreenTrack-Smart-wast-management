@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overdue__c</fullName>
+    <description>Automatically indicates if the complaint has breached its resolution SLA.</description>
+    <formula>IF(AND(NOT(ISPICKVAL(Status__c, &apos;Resolved&apos;)), NOT(ISPICKVAL(Status__c, &apos;Closed&apos;)), NOT(ISBLANK(Due_Date__c)), Due_Date__c &lt; TODAY()), true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Overdue</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

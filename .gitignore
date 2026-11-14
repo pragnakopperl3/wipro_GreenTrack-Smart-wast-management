@@ -1,0 +1,26 @@
+# Salesforce DX / local metadata
+.sfdx/
+.sf/
+.localdevserver/
+.vscode/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+**/node_modules/
+**/.eslintcache
+
+# Auth / secrets
+*.auth-file
+*.jwt
+**/credentials.json
+
+# IDE files
+.idea/
+*.iml
+
+# Ignore generated metadata from org retrieval if not needed
+# Keep source-controlled files only

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Service_Team__c</columns>
+    <columns>Collection_Date__c</columns>
+    <columns>Location__c</columns>
+    <columns>Waste_Category__c</columns>
+    <columns>Quantity_Collected__c</columns>
+    <columns>Collection_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Waste Collections</label>
+</ListView>

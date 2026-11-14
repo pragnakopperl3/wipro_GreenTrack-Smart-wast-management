@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <description>Tracks service-team assignment totals as complaints are assigned and resolved.</description>
+    <interviewLabel>Team Assignment Tracking {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Team_Assignment_Tracking</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Team_Total</name>
+        <label>Update Team Total</label>
+        <locationX>176</locationX>
+        <locationY>184</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Assigned_Team__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Total_Assignments__c</field>
+            <value>
+                <numberValue>1</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Service_Team__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Team_Total</targetReference>
+        </connector>
+        <object>Waste_Complaint__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

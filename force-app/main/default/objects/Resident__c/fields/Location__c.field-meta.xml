@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location__c</fullName>
+    <description>Geographic district of the resident.</description>
+    <label>Location</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>North District</fullName>
+                <default>false</default>
+                <label>North District</label>
+            </value>
+            <value>
+                <fullName>South District</fullName>
+                <default>false</default>
+                <label>South District</label>
+            </value>
+            <value>
+                <fullName>East District</fullName>
+                <default>false</default>
+                <label>East District</label>
+            </value>
+            <value>
+                <fullName>West District</fullName>
+                <default>false</default>
+                <label>West District</label>
+            </value>
+            <value>
+                <fullName>Central City</fullName>
+                <default>false</default>
+                <label>Central City</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

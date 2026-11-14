@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#1B5E20</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>GreenTrack - Smart Waste Management and Sustainability Platform. Manage complaints, collection runs, recycling requests, and service teams.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>GreenTrack</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Waste_Complaint__c</tabs>
+    <tabs>Resident__c</tabs>
+    <tabs>Service_Team__c</tabs>
+    <tabs>Recycling_Request__c</tabs>
+    <tabs>Waste_Collection__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>
